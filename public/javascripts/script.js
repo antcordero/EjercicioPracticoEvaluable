@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     //mostrar
-    var registradoDiv = document.getElementById('registrado');
+    let registradoDiv = document.getElementById('registrado');
     if (registradoDiv) {
       registradoDiv.addEventListener('click', function() {
         formularioRegistrado.style.display = 'block';
