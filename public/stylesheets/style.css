@@ -1,8 +1,189 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import "theme.css";
+@import "components.css";
+
+/*******************MENU*****************/
+
+header {
+  background: var(--morado-principal);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  #titulo {
+    h1 {
+      color: var(--blanco);
+    }
+  }
+
+  #nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-right: 2rem;
+    padding: 0;
+
+    li a {
+      text-decoration: none;
+      color: var(--blanco);
+      font-weight: 500;
+      transition: color 0.2s;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+
+    li a:hover,
+    li a:focus {
+      background: var(--fondo-gris);
+      color: #fff;
+    }
+
+    li {
+      position: relative;
+    }
+
+  }
+
 }
 
-a {
-  color: #00B7FF;
+
+/********************MAIN - SECTION **********/
+
+main {
+  background: var(--fondo-gris);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  section#caja-principal {
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+      "bienvenida formularios";
+    gap: 25px;
+
+    background: var(--fondo-claro);
+    margin: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(60, 60, 120, 0.15);
+    padding: 1.5rem;
+    height: 80%;
+
+    #bienvenida {
+      h1 {
+        color: var(--morado-principal);
+      }
+      p {
+        text-align: left;
+      }
+    }
+
+    #formularios {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+
+      #registrado {
+        max-width: 400px;
+        max-height: 400px;
+        background: var(--gradiente);
+        border-radius: 10px;
+        padding: 10px;
+        margin-right: 15px;
+        align-items: center;
+
+        h4 {
+          color: var(--blanco);
+          text-align: center;
+        }
+
+        #formulario-registrado {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          input {
+            background: var(--gradiente2);
+            border-radius: 8px;
+            border: none;
+            padding: 5px;
+            margin: 5px;
+          }
+
+          #botones-registro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+  
+            #envio {
+              color: var(--blanco);
+              background: var(--gradiente);  
+              border: none; 
+            }
+
+            #cancel {
+              color: black;
+              background: var(--gradiente2);
+              border: none;
+            }
+          }
+          
+        }
+
+      }
+
+      #no-registrado {
+        max-width: 400px;
+        max-height: 400px;
+        background: var(--gradiente);
+        border-radius: 10px;
+        padding: 10px;
+        margin-right: 15px;
+
+        h4 {
+          color: var(--blanco);
+          text-align: center;
+        }
+
+        
+
+      }
+    }
+
+  }
+}
+
+/********************FOOTER*********************/
+footer {
+  background: var(--footer-color);
+  color: var(--blanco);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.5rem;
+
+  p {
+    margin: 0px;
+    
+    a {
+      text-decoration: none;
+      color: var(--blanco);
+    }
+  }
 }

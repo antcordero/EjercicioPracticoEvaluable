@@ -1,0 +1,14 @@
+:root {
+    --morado-principal: #667eea;
+    --morado-secundario: #764ba2;
+    --fondo-claro: #f5f7fa;
+    --fondo-gris: #c3cfe2;
+
+    --bordes: #e0e0e0;
+    --fondo-cancelar: #f0f0f0;
+    --footer-color: #2c3e50;
+    --blanco: #fff;
+    
+    --gradiente: linear-gradient(135deg, #667eea 0%, #764ba2 10%);
+    --gradiente2: linear-gradient(135deg, #f5f7fa 0%, #cecfe2 100%);
+}

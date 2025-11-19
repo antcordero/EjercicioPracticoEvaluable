@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ejericio Práctico Evaluable</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Ejercicio Práctico - 19/11</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Este sitio web rtata sobre videojuegos" />
+    <meta name="keywords" content="videojuegos,colecciones,games" />
+    <meta name="author" content="Francisco Romero" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="alternate"
+      href="atom.xml"
+      type="application/atom+xml"
+      title="Atom"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="videojuegos.com" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <h1>Ejercicio Practico Evaluable</h1>
-    <a href="/videojuegos">Videojuego</a>
+    <body>
+  
+      <%- include("partials/menuNav") %>
+
+      <main>
+        <section id="caja-principal">
+          <div id="bienvenida">
+            <h1>!Bienvenido!</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt voluptas dignissimos aliquid</p> 
+            <p>neque reiciendis consequatur mollitia. Unde, ad cupiditate pariatur quasi, soluta mollitia quisquam magnam ullam dignissimos qui maiores suscipit.</p>
+          </div>
+
+          <div id="formularios">
+            <div id="registrado">
+              <h4>Ya estoy registrado</h4>
+              <div id="formulario-registrado">
+                <form action="" method="POST">
+                  <input type="email" id="email" name="email" required />
+                  <br />
+                  <input type="password" id="password" name="password" required />
+                  <br />
+                  <div id="botones-registro">
+                    <button id=envio type="submit">Enviar</button>
+                    <button id=cancel type="">Cancelar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div id="no-registrado">
+              <h4>No estoy registrado</h4>
+              <p>Introduce tu correo electrónico para crear una cuenta</p>
+              <div id="formulario-no-registro">
+                <form action="" method="POST">
+                  <input type="email" id="email" name="email" required />
+                  <br />
+                  <div id="botones-no-registro">
+                    <button id=envio type="submit">Enviar</button>
+                    <button id=cancel type="">Cancelar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%- include("partials/footer") %>
+
+      <script scr="/javascripts/script.js"></script>
   </body>
 </html>
