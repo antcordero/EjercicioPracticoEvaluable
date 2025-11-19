@@ -1,7 +1,22 @@
 /*
 funciones para el -registro
 */
-
+document.addEventListener('DOMContentLoaded', function() {
+    let formularioRegistrado = document.getElementById('formulario-registrado');
+  
+    if (formularioRegistrado) {
+      formularioRegistrado.style.display = 'none';
+    }
+  
+    //mostrar
+    var registradoDiv = document.getElementById('registrado');
+    if (registradoDiv) {
+      registradoDiv.addEventListener('click', function() {
+        formularioRegistrado.style.display = 'block';
+      });
+    }
+  });
+  
 /*
 funciones para el no-registro
 */
